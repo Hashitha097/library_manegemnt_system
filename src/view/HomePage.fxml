@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="835.0" prefWidth="1349.0" style="-fx-background-color: #F1F1F1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <VBox layoutY="36.0" prefHeight="810.0" prefWidth="108.0">
+         <effect>
+            <InnerShadow height="36.55" radius="21.6625" width="52.1" />
+         </effect>
+         <opaqueInsets>
+            <Insets right="7.0" />
+         </opaqueInsets>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="92.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="58.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-checklist-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttDashboard" text="Dashboard" />
+               </tooltip></Button>
+            <Button fx:id="btnAddMember" mnemonicParsing="false" onAction="#navigateToAddMember" prefHeight="95.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-add-user-group-man-man-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttAddNewMember" text="Add New Member" />
+               </tooltip></Button>
+            <Button fx:id="btnSearchMember" mnemonicParsing="false" onAction="#navigateToSearchMember" prefHeight="90.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-find-user-male-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttSearchMember" text="Search Member" />
+               </tooltip></Button>
+            <Button fx:id="btnAddBook" mnemonicParsing="false" onAction="#navigateToAddBook" prefHeight="88.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/623443_book_256x256.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttAddNewBook" text="Add New Book" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnSearchBook" mnemonicParsing="false" onAction="#navigateToSearchBook" prefHeight="93.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/unnamed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttSearchBook" text="Search Book" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnIssueAndReturn" mnemonicParsing="false" onAction="#navigateToIssueAndReturn" prefHeight="95.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/literature_exchange-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttIssueReturnBook" text="Issue And Return Books" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnReports" mnemonicParsing="false" prefHeight="93.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttReport" text="Reports" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnSettings" mnemonicParsing="false" prefHeight="92.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-settings-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttSettings" text="Settings" />
+               </tooltip>
+            </Button>
+            <Button fx:id="btnInfor" mnemonicParsing="false" onAction="#btninforOnAction" prefHeight="96.0" prefWidth="108.0" textAlignment="RIGHT" textFill="#dada5d">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-info-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="ttMore" text="More Informations about System" />
+               </tooltip>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="17.0" prefWidth="1350.0" style="-fx-background-color: #4D090A;">
+         <children>
+            <Label layoutX="109.0" layoutY="9.0" text="Libray Managemant System of ABC" textFill="#b53e3e" />
+            <JFXButton fx:id="btnClose" layoutX="1245.0" onAction="#closeButtonAction" prefHeight="21.0" prefWidth="88.0" ripplerFill="#dda2a2" style="-fx-background-color: #BA0109; -fx-background-radius: 10PX;" text="Close" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#487c2a" height="118.0" layoutX="190.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="311.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b22f33" height="118.0" layoutX="528.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="311.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#244e75" height="118.0" layoutX="865.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="311.0" />
+      <Label layoutX="226.0" layoutY="105.0" text="Issued Books : " textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="557.0" layoutY="105.0" text="Returend Books : " textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="895.0" layoutY="105.0" text="Delayed Returns :" textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIssueBooks" layoutX="376.0" layoutY="105.0" text="0" textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReturnBooks" layoutX="733.0" layoutY="105.0" text="0" textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDelayedReturns" layoutX="1074.0" layoutY="105.0" text="0" textFill="#f1f1f1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="109.0" layoutY="216.0" prefHeight="616.0" prefWidth="1226.0" style="-fx-background-color: #F1F1F1;">
+         <effect>
+            <Lighting diffuseConstant="1.75" specularConstant="1.3" surfaceScale="1.38">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <children>
+            <PieChart fx:id="pieChartMembers" layoutX="747.0" layoutY="49.0" legendVisible="false" prefHeight="474.0" prefWidth="465.0" title="Member Summary :" />
+            <BarChart fx:id="barChart" alternativeColumnFillVisible="true" categoryGap="20.0" layoutX="9.0" layoutY="44.0" legendVisible="false" prefHeight="484.0" prefWidth="717.0" title="Recors books">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <effect>
+      <Blend mode="SRC_ATOP" />
+   </effect>
+</AnchorPane>
